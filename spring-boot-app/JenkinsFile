@@ -33,7 +33,7 @@ pipeline {
       environment {
         DOCKER_IMAGE = "rakeshyadav9698/ultimate-cicd:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "spring-boot-app/Dockerfile"
-        REGISTRY_CREDENTIALS = credentials('docker-cred')
+        REGISTRY_CREDENTIALS = credentials('docker')
       }
       steps {
         script {

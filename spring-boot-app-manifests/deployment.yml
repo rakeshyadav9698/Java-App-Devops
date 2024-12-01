@@ -1,11 +1,11 @@
-apiVersion: apps/v7
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: spring-boot-app
   labels:
     app: spring-boot-app
 spec:
-  replicas: 7
+  replicas: 2
   selector:
     matchLabels:
       app: spring-boot-app
@@ -18,4 +18,4 @@ spec:
       - name: spring-boot-app
         image: rakeshyadav9698/ultimate-cicd:7
         ports:
-        - containerPort: 7
+        - containerPort: 8080
